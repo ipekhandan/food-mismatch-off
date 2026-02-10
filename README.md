@@ -11,3 +11,4 @@ Bu bitirme projesinde yalnızca **OpenFoodFacts** verileri kullanılarak, ambala
 ## Kurallar
 - Veri kaynağı: **Sadece OpenFoodFacts**
 - Büyük dosyalar repoya eklenmez: `data/raw`, `data/cache`
+aaaaa
