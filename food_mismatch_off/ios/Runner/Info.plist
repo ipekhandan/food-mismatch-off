@@ -26,6 +26,12 @@
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>Ürün ambalajını taramak için kamera iznine ihtiyacımız var</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Video çekimi için mikrofon izni</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Galeri fotoğraflarını seçmek için izin gerekli</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

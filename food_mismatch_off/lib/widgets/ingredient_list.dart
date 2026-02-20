@@ -3,7 +3,10 @@ import 'package:flutter/material.dart';
 class IngredientList extends StatelessWidget {
   final List<String> ingredients;
 
-  const IngredientList({Key? key, required this.ingredients}) : super(key: key);
+  const IngredientList({
+    super.key,
+    required this.ingredients,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -24,10 +27,10 @@ class IngredientList extends StatelessWidget {
             ),
             const SizedBox(height: 12),
             ...ingredients.asMap().entries.map((entry) {
-              int index = entry.key;
-              String ingredient = entry.value;
-              bool isAdditive = ingredient.startsWith('E');
-              
+              final index = entry.key;
+              final ingredient = entry.value;
+              final isAdditive = ingredient.startsWith('E');
+
               return Padding(
                 padding: const EdgeInsets.symmetric(vertical: 4),
                 child: Row(
@@ -35,7 +38,7 @@ class IngredientList extends StatelessWidget {
                     Text(
                       '${index + 1}.',
                       style: TextStyle(
-                        color: Colors.grey[600],
+                        color: Colors.grey.shade600,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -45,21 +48,24 @@ class IngredientList extends StatelessWidget {
                         ingredient,
                         style: TextStyle(
                           fontSize: 16,
-                          color: isAdditive ? Colors.red[700] : Colors.grey[800],
-                          fontWeight: isAdditive ? FontWeight.bold : FontWeight.normal,
+                          color: isAdditive
+                              ? Colors.red.shade700
+                              : Colors.grey.shade800,
+                          fontWeight:
+                              isAdditive ? FontWeight.bold : FontWeight.normal,
                         ),
                       ),
                     ),
                     if (isAdditive)
                       Icon(
                         Icons.warning_amber_rounded,
-                        color: Colors.orange[700],
+                        color: Colors.orange.shade700,
                         size: 20,
                       ),
                   ],
                 ),
               );
-            }).toList(),
+            }),
           ],
         ),
       ),

@@ -3,7 +3,10 @@ import 'package:flutter/material.dart';
 class ScoreCard extends StatelessWidget {
   final int score;
 
-  const ScoreCard({Key? key, required this.score}) : super(key: key);
+  const ScoreCard({
+    super.key,
+    required this.score,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -23,13 +26,18 @@ class ScoreCard extends StatelessWidget {
 
     return Card(
       elevation: 4,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(16),
+      ),
       child: Container(
         padding: const EdgeInsets.all(24),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16),
           gradient: LinearGradient(
-            colors: [scoreColor.withOpacity(0.7), scoreColor],
+            colors: [
+              scoreColor.withValues(alpha: 0.7),
+              scoreColor,
+            ],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),
