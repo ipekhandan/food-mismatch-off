@@ -1,24 +1,44 @@
-.DS_Store
+# Environment files
+.env
+*.env
+backend/.env
 
 # Python
+backend/.venv/
+.venv/
 __pycache__/
 *.pyc
-.venv/
-venv/
-.env
+*.pyo
+*.pyd
 
-# Jupyter
-.ipynb_checkpoints/
+# Flutter / Dart
+food_mismatch_off/build/
+food_mismatch_off/.dart_tool/
+food_mismatch_off/.flutter-plugins
+food_mismatch_off/.flutter-plugins-dependencies
+food_mismatch_off/.packages
 
-# Data (OFF downloads, keep repo light)
-data/raw/
-data/cache/
+# Android generated/local
+food_mismatch_off/android/.gradle/
+food_mismatch_off/android/app/build/
+food_mismatch_off/android/local.properties
 
-# Logs
-*.log
+# iOS generated files
+food_mismatch_off/ios/Pods/
+food_mismatch_off/ios/.symlinks/
+food_mismatch_off/ios/Flutter/Flutter.framework
+food_mismatch_off/ios/Flutter/Flutter.podspec
+food_mismatch_off/ios/Flutter/Generated.xcconfig
+food_mismatch_off/ios/Flutter/flutter_export_environment.sh
+food_mismatch_off/ios/Flutter/ephemeral/
+food_mismatch_off/ios/Runner.xcworkspace/xcuserdata/
 
-# Flutter/Android/iOS (later)
-mobile/app/build/
-mobile/app/.dart_tool/
-mobile/app/.flutter-plugins
-mobile/app/.flutter-plugins-dependencies
+# Desktop generated
+food_mismatch_off/linux/flutter/ephemeral/
+food_mismatch_off/macos/Flutter/ephemeral/
+food_mismatch_off/windows/flutter/ephemeral/
+
+# macOS / IDE
+.DS_Store
+.idea/
+.vscode/
