@@ -11,3 +11,4 @@
 - Basit mismatch + risk skoru (rule-based)
 
 Not: Veri üretimi yok, sadece OpenFoodFacts.
+aaaaa
